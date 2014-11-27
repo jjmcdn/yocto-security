@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+   <!-- shorthand for repos to fetch -->
+   <remote fetch="git://github.com/" name="github"/>
+   <remote fetch="git://git.yoctoproject.org/" name="yocto"/>
+   <remote fetch="git://git.openembedded.org/" name="oe"/>
+   <!-- remote fetch="" name=""/ -->
+
+   <!-- what're we going to choose in the absense of anything else -->
+   <default remote="github" revision="refs/heads/master" sync-j="4"/>
+
+   <project remote="yocto" name="poky" path="yocto-mainline" />
+   <project remote="yocto" name="meta-security" path="meta-security" />
+   <project remote="yocto" name="meta-intel" path="meta-intel" />
+   <project remote="oe" name="meta-openembedded" path="meta-openembedded" />
+
+</manifest>
